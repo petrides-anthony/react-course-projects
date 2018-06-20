@@ -2,19 +2,23 @@
 
 console.log('App.js is still running!');
 
-// JSX - JavaScript XML
+var app = {
+    title: 'Indecision App',
+    subtitle: 'Put your life in the hands of a computer'
+};
+
 var template = React.createElement(
     'div',
     null,
     React.createElement(
         'h1',
         null,
-        'Indecision App!'
+        app.title
     ),
     React.createElement(
         'p',
         null,
-        'This is just some info'
+        app.subtitle
     ),
     React.createElement(
         'ol',
@@ -31,6 +35,35 @@ var template = React.createElement(
         )
     )
 );
+
+var user = {
+    name: 'Tony',
+    age: 26,
+    location: 'London'
+};
+
+var templateTwo = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        user.name
+    ),
+    React.createElement(
+        'p',
+        null,
+        'Age: ',
+        user.age
+    ),
+    React.createElement(
+        'p',
+        null,
+        'Location: ',
+        user.location
+    )
+);
+
 var appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
