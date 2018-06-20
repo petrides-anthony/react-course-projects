@@ -4,9 +4,32 @@ console.log('App.js is still running!');
 
 // JSX - JavaScript XML
 var template = React.createElement(
-  'h1',
-  null,
-  'This is JSX from app.js!'
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        'Indecision App!'
+    ),
+    React.createElement(
+        'p',
+        null,
+        'This is just some info'
+    ),
+    React.createElement(
+        'ol',
+        null,
+        React.createElement(
+            'li',
+            null,
+            'Item one'
+        ),
+        React.createElement(
+            'li',
+            null,
+            'Item two'
+        )
+    )
 );
 var appRoot = document.getElementById('app');
 
